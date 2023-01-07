@@ -1,5 +1,6 @@
 arr = [2, 4, 5, 5, 5, 5, 6, 9, 8]
 
+
 def first_last(array, char):
     first = -1
     last = -1
@@ -9,5 +10,6 @@ def first_last(array, char):
         if array[i] == char:
             last = i
     return [first, last]
+
 
 print(first_last(arr, 9))
