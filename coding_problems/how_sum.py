@@ -31,6 +31,9 @@ print(how_sum(7, [2, 4]))
 print(how_sum(8, [2, 3, 5]))
 # memo = {}
 print(how_sum(300, [7, 14]))
+print(how_sum(3000, [7, 14]))
+print(how_sum(4000, [12, 60, 40]))
+
 
 # seems like issues with memo are fixed by creating a global dict
 #  and resetting it in between each call of the external function
