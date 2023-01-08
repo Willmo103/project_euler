@@ -11,7 +11,7 @@ def time_logger():
         return wrapper
     return decorator
 
-@time_logger()
+# @time_logger()
 def best_sum(targetSum, numbers, start=True, memo=None):
     if start:
         memo = {}
@@ -34,11 +34,11 @@ def best_sum(targetSum, numbers, start=True, memo=None):
     memo[targetSum] = None
     return shortest
 
-print(best_sum(7, [2, 3]))
-print(best_sum(7, [5, 3, 4, 7]))
-print(best_sum(7, [2, 4]))
-print(best_sum(8, [2, 3, 5]))
-print(best_sum(300, [7, 14, 30, 300]))
+# print(best_sum(7, [2, 3]))
+# print(best_sum(7, [5, 3, 4, 7]))
+# print(best_sum(7, [2, 4]))
+# print(best_sum(8, [2, 3, 5]))
+# print(best_sum(300, [7, 14, 30, 300]))
 
 
 # in this one the main take away for me is that if the early return statement
@@ -46,3 +46,23 @@ print(best_sum(300, [7, 14, 30, 300]))
 # calculations on all paths which we need to determine the shortest possible answer
 # just a simple tweaking of the initial algo from the last 2 problems to get to the
 # most efficient solution for the problem
+
+# additionally my time decorator needs some work to be able to handle the recursive
+# calls to the function i think i can try something like this...
+
+@time_logger()
+def call_f(target, numbers):
+    return best_sum(target, numbers)
+
+print(call_f(7, [2, 3]))
+print(call_f(7, [5, 3, 4, 7]))
+print(call_f(7, [2, 4]))
+print(call_f(8, [2, 3, 5]))
+print(call_f(300, [7, 14, 30, 300]))
+
+# which seemed to do the trick. I tried to add an additional wrapper
+# to my decorator but am not sure how to implement it properly
+
+# wanted to see if adding the shortest to the memo dict would effect time
+# but it actually made it take longer, im guessing because of te hash time it takes
+# to unpack the key in the memo rather than just pointing to the variable at the top level
