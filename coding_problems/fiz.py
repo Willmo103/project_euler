@@ -22,5 +22,6 @@ def fizzbuzz(x):
 
 fizzbuzz(100)
 
+
 # seems to be the optimal version of fizzbuzz allowing
 # for the easy refactoring
