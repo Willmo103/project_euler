@@ -14,14 +14,14 @@ const howConstruct = (target, words) => {
   return table[target.length];
 };
 
-console.log(howConstruct("abcdefgh", ["ab", "c", "def", "gh"]));
-console.log(howConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "bo"]));
-console.log(howConstruct("purple", ["purp", "p", "ur", "le", "purpl"]));
+console.log(allConstruct("abcdefgh", ["ab", "c", "def", "gh"]));
+console.log(allConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "bo"]));
+console.log(allConstruct("purple", ["purp", "p", "ur", "le", "purpl"]));
 console.log(
-  howConstruct("enterpotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
+  allConstruct("enterpotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
 );
 console.log(
-  howConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeef", [
+  allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeef", [
     "eee",
     "eeeee",
     "eeee",

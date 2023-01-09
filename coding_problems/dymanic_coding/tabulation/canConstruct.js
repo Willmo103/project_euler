@@ -1,4 +1,4 @@
-const howConstruct = (target, words) => {
+const allConstruct = (target, words) => {
   const table = Array(target.length + 1).fill(false);
   table[0] = true;
   for (let i = 0; i < target.length; i++) {
@@ -12,13 +12,13 @@ const howConstruct = (target, words) => {
   }
   return table[target.length];
 };
-console.log(howConstruct("abcdefgh", ["ab", "c", "def", "gh"]));
-console.log(howConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "bo"]));
+console.log(allConstruct("abcdefgh", ["ab", "c", "def", "gh"]));
+console.log(allConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "bo"]));
 console.log(
-  howConstruct("enterpotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
+  allConstruct("enterpotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
 );
 console.log(
-  howConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeef", [
+  allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeef", [
     "eee",
     "eeeee",
     "eeee",
