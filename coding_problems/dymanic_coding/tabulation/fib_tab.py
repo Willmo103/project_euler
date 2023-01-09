@@ -21,3 +21,5 @@ print(fib(50))
 # index but to get this to work first took figuring out why it wasn't and how to
 # implement the changes to make it consistent for the further examples.
 #
+# MUST remember to fill indexes longer by furthest out operation preformed + 1
+
